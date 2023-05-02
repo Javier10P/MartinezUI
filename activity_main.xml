@@ -1,0 +1,50 @@
+//activity_main.xml
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_background">
+
+    <ImageView
+        android:id="@+id/character"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/character"/>
+
+    <Button
+        android:id="@+id/moveLeftButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:text="Left"/>
+
+    <Button
+        android:id="@+id/moveRightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/moveLeftButton"
+        android:layout_alignParentBottom="true"
+        android:text="Right"/>
+
+    <Button
+        android:id="@+id/moveUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/moveLeftButton"
+        android:layout_alignParentRight="true"
+        android:text="Up"/>
+
+    <Button
+        android:id="@+id/moveDownButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/moveLeftButton"
+        android:layout_alignParentRight="true"
+        android:text="Down"/>
+
+</RelativeLayout>
