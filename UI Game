@@ -1,0 +1,56 @@
+MainActivity.java
+
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+    private ImageView character;
+    private Button moveLeftButton;
+    private Button moveRightButton;
+    private Button moveUpButton;
+    private Button moveDownButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        character = findViewById(R.id.character);
+        moveLeftButton = findViewById(R.id.moveLeftButton);
+        moveRightButton = findViewById(R.id.moveRightButton);
+        moveUpButton = findViewById(R.id.moveUpButton);
+        moveDownButton = findViewById(R.id.moveDownButton);
+
+        moveLeftButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                character.setX(character.getX() - 10);
+            }
+        });
+
+        moveRightButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                character.setX(character.getX() + 10);
+            }
+        });
+
+        moveUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                character.setY(character.getY() - 10);
+            }
+        });
+
+        moveDownButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                character.setY(character.getY() + 10);
+            }
+        });
+    }
+}
